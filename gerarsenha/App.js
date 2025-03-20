@@ -34,9 +34,9 @@ const App = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Gerador de Senhas</Text>
       <View style={styles.buttonContainer}>
-        <Button title="Gerar Senha Normal" onPress={gerarSenhaNormal} />
-        <Button title="Gerar Senha Prioritário" onPress={gerarSenhaPrioritario} />
-        <Button title="Gerar Senha Alta Prioridade" onPress={gerarSenhaAltaPrioridade} />
+        <Button color='#006400' title="Gerar Senha Normal" onPress={gerarSenhaNormal} />
+        <Button color='#006400' title="Gerar Senha Prioritário" onPress={gerarSenhaPrioritario} />
+        <Button color='#006400' title="Gerar Senha Alta Prioridade" onPress={gerarSenhaAltaPrioridade} />
       </View>
       <Text style={styles.senhaGerada}>Senha Gerada: {senhaGerada}</Text>
     </View>
@@ -45,22 +45,28 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
-  },
+    padding: 20,  
+    backgroundColor: 'grey',
+    height:'100%',
+    },
   title: {
-    fontSize: 24,
-    marginBottom: 20,
+    fontSize: 30,
+    fontWeight: 'bold',
+    marginBottom: 150,
+    color:'white',
   },
   buttonContainer: {
-    marginBottom: 20,
+    marginBottom: 80,
+    gap: 5,
   },
   senhaGerada: {
-    fontSize: 18,
+    fontSize: 25,
     marginTop: 20,
+     color:'white',
   },
+
 });
 
 export default App;
